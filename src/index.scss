@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  height: 100vh;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+.App {
+  width: 500px;
+  height: 400px;
+  padding: 20px;
+  overflow-y: scroll;
+  background-color: #fff;
+  box-shadow: 0px 9px 24px rgba(0, 0, 0, 0.01), 0px 25px 40px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  border: 1px solid #ebebeb;
+}
+
+.add-form {
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  overflow: hidden;
+
+  input {
+    width: 100%;
+    border: none;
+    font-size: 18px;
+    padding: 10px;
+    outline: none;
+    border: none;
+  }
+  & button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+  margin-top: 12px;
+  word-break: break-all;
+
+  .check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  .check-item {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+}
+.complete {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.icons {
+  display: flex;
+  text-align: center;
+  gap: 10px;
+}
+.edit {
+  cursor: pointer;
+  margin-left: 5px;
+}
+.remove {
+  cursor: pointer;
+  flex-shrink: 0;
+}
+@media (max-width: 480px) {
+  .App {
+    width: 300px;
+    height: 600px;
+  }
+}
